@@ -21,8 +21,13 @@ bench-md = []
 bench-plot = []
 hybrid = []
 
+[lib]
+name = "gxhashpy"
+crate-type = ["cdylib"]
+
 [dependencies]
 rustversion = "1.0" # Compile-time cfg based on rustc version for compatibility
+pyo3 = { version = "0.23.4", features = ["extension-module"] }
 
 [dev-dependencies]
 rand = "0.8"
